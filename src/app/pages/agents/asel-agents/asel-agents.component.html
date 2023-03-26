@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of Users">
+            <td>{{user.NO}}</td>
+            <td>{{user.NAME}}</td>
+            <td>{{user.EMAIL}}</td>
+            <td>{{user.phone}}</td>
+            <td>
+              <span class="text-primary" (click)="remove(user.id)">Delete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
